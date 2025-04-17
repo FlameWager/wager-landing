@@ -25,7 +25,7 @@ const showMobileMenu = ref(false)
 	<header :class="[$style.wrapper]">
 
 		<!-- Mobile menu -->
-		<transition name="fade">
+		<!-- <transition name="fade">
 			<div v-if="showMobileMenu" @click="showMobileMenu = false" :class="$style.mobile_menu">
 				<Flex direction="column" gap="16">
 					<Flex direction="column" gap="16">
@@ -60,13 +60,13 @@ const showMobileMenu = ref(false)
 					</Flex>
 				</Flex>
 			</div>
-		</transition>
+		</transition> -->
 
 		<div :class="$style.base">
 			<div :class="$style.left">
-				<div @click="showMobileMenu = !showMobileMenu" :class="$style.mobile_menu_icon">
+				<!-- <div @click="showMobileMenu = !showMobileMenu" :class="$style.mobile_menu_icon">
 					<Icon :name="showMobileMenu ? 'close' : 'menu'" size="16" />
-				</div>
+				</div> -->
 
 				<a href="/" :class="$style.logo" tabindex="-1">
 					<Icon name="logo_symbol" size="28" />
@@ -74,7 +74,7 @@ const showMobileMenu = ref(false)
 			</div>
 
 			<div :class="$style.links">
-				<a
+				<!-- <a
 					v-for="link in links"
 					:key="link.name"
 					:href="link.url"
@@ -83,12 +83,12 @@ const showMobileMenu = ref(false)
 					<Flex align="center" gap="8" :class="$style.link_content"
 						><Icon :name="link.icon" size="16" fill />{{ link.name }}</Flex
 					>
-			</a>
+			</a> -->
 			</div>
 
 			<div :class="$style.right">
 				<Button type="primary" size="small" :link="linksConfig.demo">
-					<Icon name="login" size="16" />
+					<Icon name="spark" size="16" />
 					Launch Demo
 				</Button>
 			</div>

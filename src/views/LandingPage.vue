@@ -24,7 +24,7 @@ export default {
 <template>
 	<Page :class="$style.wrapper">
 		<div :class="$style.header">
-			<a
+			<!-- <a
                 :href="links.roadmap"
                 target="_blank"
                 :class="$style.roadmap"
@@ -38,7 +38,7 @@ export default {
                 <div :class="$style.dot" />
 
                 <div :class="$style.roadmap_link">View our Roadmap</div>
-            </a>
+            </a> -->
 
 			<h1>Decentralized Betting Protocol</h1>
 			<div :class="$style.description">
@@ -51,8 +51,8 @@ export default {
                 <Button type="primary" size="medium" :link="links.demo">
                     <Icon name="spark" size="16" />Launch Demo
                 </Button>
-                <Button type="secondary" size="medium" :link="links.docs">
-                    <Icon name="book" size="16" />Read the docs
+                <Button type="secondary" size="medium" :link="links.telegram">
+                    <Icon name="telegram" size="16" />Join Telegram
                 </Button>
 			</div>
 

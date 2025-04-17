@@ -23,16 +23,16 @@ import { links } from "@/config"
 					</div> -->
 
 					<div :class="$style.column">
-						<div :class="$style.name">Learn</div>
+						<!-- <div :class="$style.name">Learn</div>
 						<a :href="links.docs" :class="$style.link">Documentation</a>
-						<a :href="links.roadmap" :class="$style.link">Roadmap</a>
+						<a :href="links.roadmap" :class="$style.link">Roadmap</a> -->
 						<!-- <router-link to="/docs/faq" :class="$style.link">FAQ</router-link> -->
 					</div>
 
 					<div :class="$style.column">
-						<div :class="$style.name">Misc</div>
+						<!-- <div :class="$style.name">Misc</div>
 						<a :href="links.privacyPolicy" :class="$style.link">Privacy Policy</a>
-						<a :href="links.termsOfUse" :class="$style.link">Terms of Use</a>
+						<a :href="links.termsOfUse" :class="$style.link">Terms of Use</a> -->
 						<!-- <router-link to="/sitemap" :class="$style.link">Sitemap</router-link> -->
 					</div>
 				</div>
@@ -93,10 +93,10 @@ import { links } from "@/config"
 							Twitter
 							<Icon name="arrowrighttop" size="16" color="tertiary" />
 						</Button>
-						<Button type="secondary" size="small" :link="links.github" :class="$style.footer_btn">
+						<!-- <Button type="secondary" size="small" :link="links.github" :class="$style.footer_btn">
 							GitHub
 							<Icon name="arrowrighttop" size="16" color="tertiary" />
-						</Button>
+						</Button> -->
 					</div>
 				</div>
 
