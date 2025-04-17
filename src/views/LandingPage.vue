@@ -52,7 +52,7 @@ export default {
                     <Icon name="spark" size="16" />Launch Demo
                 </Button>
                 <Button type="secondary" size="medium" :link="links.telegram">
-                    <Icon name="telegram" size="16" />Join Telegram
+                    <Icon name="telegram" size="16" />Telegram channel
                 </Button>
 			</div>
 
