@@ -128,12 +128,11 @@ html {
 .app_wrapper {
 	display: flex;
 	flex-direction: column;
+	min-height: 100vh;
 }
 
 .app_base {
 	flex: 1;
-
-	min-height: 90vh;
 
 	padding-top: 80px;
 }
