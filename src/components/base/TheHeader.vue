@@ -89,7 +89,7 @@ const showMobileMenu = ref(false)
 			<div :class="$style.right">
 				<Button type="primary" size="small" :link="linksConfig.demo">
 					<Icon name="spark" size="16" />
-					Launch Demo
+					Launch App
 				</Button>
 			</div>
 		</div>

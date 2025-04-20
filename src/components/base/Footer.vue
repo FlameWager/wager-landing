@@ -105,18 +105,18 @@ import { links } from "@/config"
 						<Text size="14" weight="500" color="tertiary"> © {{ new Date().getFullYear() }}&nbsp;&nbsp; </Text>
 						<Text size="11" color="support">✦</Text>
 						<Text size="14" weight="500" color="secondary"> &nbsp;&nbsp;Juster&nbsp; </Text>
-						<Text size="14" weight="500" color="tertiary"> Market data provided by&nbsp; </Text>
+						<!-- <Text size="14" weight="500" color="tertiary"> Market data provided by&nbsp; </Text>
 						<a :href="links.oracle" target="_blank">
 							<Text size="14" weight="500" color="secondary"> RedStone Oracle </Text>
-						</a>
+						</a> -->
 					</Flex>
 
-					<Flex direction="column" gap="8" align="end" :class="$style.line">
+					<!-- <Flex direction="column" gap="8" align="end" :class="$style.line">
 						<Text size="12" weight="500" color="support">
 							Participation in gambling is prohibited for persons under the age of 21+
 						</Text>
 						<Text size="12" weight="500" color="support"> Check your country's restrictions before using the application </Text>
-					</Flex>
+					</Flex> -->
 				</Flex>
 			</div>
 		</div>
