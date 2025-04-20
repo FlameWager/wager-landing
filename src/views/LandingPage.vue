@@ -43,9 +43,8 @@ export default {
 
       <h1>Juster</h1>
       <div :class="$style.description">
-        <span>Juster</span> is AMM Binary Options Platform allowing users to
-        take part in an automated betting market by creating events, providing
-        liquidity to them, and making bets.
+        <span>Juster</span> is an AMM Binary Options Platform that allows users to 
+        participate in price movement events by placing bets, completing tasks, and earning rewards.
       </div>
 
       <div :class="$style.buttons">
@@ -369,6 +368,12 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-bottom: 70px;
+}
+
+@media (max-width: 900px) {
+  .header {
+    margin-bottom: 10px;
+  }
 }
 
 .roadmap {
