@@ -20,19 +20,10 @@ import { links } from "@/config";
             <Button
               type="secondary"
               size="small"
-              :link="links.telegram"
-              :class="$style.footer_btn"
-            >
-              Telegram
-              <Icon name="arrowrighttop" size="16" color="tertiary" />
-            </Button>
-            <Button
-              type="secondary"
-              size="small"
               :link="links.twitter"
               :class="$style.footer_btn"
             >
-              Twitter
+              X
               <Icon name="arrowrighttop" size="16" color="tertiary" />
             </Button>
           </div>
@@ -46,7 +37,7 @@ import { links } from "@/config";
           </Text>
           <Text size="11" color="support">✦</Text>
           <Text size="14" weight="500" color="secondary">
-            &nbsp;&nbsp;Juster&nbsp;
+            &nbsp;&nbsp;Wager&nbsp;
           </Text>
         </Flex>
       </Flex>

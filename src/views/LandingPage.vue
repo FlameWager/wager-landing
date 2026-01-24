@@ -8,11 +8,12 @@ import Page from "@/components/base/Page.vue";
  * UI
  */
 import Button from "@/components/ui/Button.vue";
+import Text from "@/components/typography/Text.vue";
 import { token, links } from "@/config.js";
 
 export default {
   name: "LandingPage",
-  components: { Page, Button },
+  components: { Page, Button, Text },
   data() {
     return {
       token,
@@ -41,18 +42,16 @@ export default {
                 <div :class="$style.roadmap_link">View our Roadmap</div>
             </a> -->
 
-      <h1>Juster</h1>
+      <h1>Wager</h1>
       <div :class="$style.description">
-        <span>Juster</span> is an AMM Binary Options Platform that allows users to 
+        <span>Wager</span> is an AMM Binary Options Platform that allows users to 
         participate in price movement events by placing bets, completing tasks, and earning rewards.
       </div>
 
       <div :class="$style.buttons">
-        <Button type="primary" size="medium" :link="links.demo">
-          <Icon name="spark" size="16" />Launch App
-        </Button>
-        <Button type="secondary" size="medium" :link="links.telegram">
-          <Icon name="telegram" size="16" />Telegram channel
+        <Text size="18" weight="600" :class="$style.coming_soon_text">COMING SOON</Text>
+        <Button type="secondary" size="medium" :link="links.twitter">
+          <Icon name="x" size="16" />X channel
         </Button>
       </div>
 
@@ -88,35 +87,41 @@ export default {
     <div :class="$style.block">
       <div :class="$style.benefits">
         <div :class="$style.benefit">
-          <div :class="$style.benefit_img">
-            <Icon name="shield_tick" size="40" />
-          </div>
-          <div>
-            <div :class="$style.benefit_name">Risk-Free Predictions</div>
-            <div :class="$style.benefit_description">
-              Predict if the price goes up or down using virtual points (PTS) — no real funds, no risk
+          <div :class="$style.benefit_content">
+            <div :class="$style.benefit_img">
+              <Icon name="shield_tick" size="40" />
+            </div>
+            <div>
+              <div :class="$style.benefit_name">Risk-Free Predictions</div>
+              <div :class="$style.benefit_description">
+                Predict if the price goes up or down using virtual points (PTS) — no real funds, no risk
+              </div>
             </div>
           </div>
         </div>
         <div :class="$style.benefit">
-          <div :class="$style.benefit_img">
-            <Icon name="rank_crown" size="40" />
-          </div>
-          <div>
-            <div :class="$style.benefit_name">Compete and Win</div>
-            <div :class="$style.benefit_description">
-              Climb the leaderboard, complete tasks, and win prizes: Telegram gifts, Stars, and more
+          <div :class="$style.benefit_content">
+            <div :class="$style.benefit_img">
+              <Icon name="rank_crown" size="40" />
+            </div>
+            <div>
+              <div :class="$style.benefit_name">Compete and Win</div>
+              <div :class="$style.benefit_description">
+                Climb the leaderboard, complete tasks, and win prizes: Telegram gifts, Stars, and more
+              </div>
             </div>
           </div>
         </div>
         <div :class="$style.benefit">
-          <div :class="$style.benefit_img">
-            <Icon name="hex" size="40" />
-          </div>
-          <div>
-            <div :class="$style.benefit_name">Decentralized Future</div>
-            <div :class="$style.benefit_description">
-              Mainnet is coming soon — real bets, no central control, powered by TON
+          <div :class="$style.benefit_content">
+            <div :class="$style.benefit_img">
+              <Icon name="hex" size="40" />
+            </div>
+            <div>
+              <div :class="$style.benefit_name">Decentralized Future</div>
+              <div :class="$style.benefit_description">
+                Mainnet is coming soon — real bets, no central control, powered by Etherlink
+              </div>
             </div>
           </div>
         </div>
@@ -449,7 +454,15 @@ export default {
 
 .buttons {
   display: flex;
+  align-items: center;
   gap: 16px;
+}
+
+.coming_soon_text {
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  font-size: 18px;
 }
 
 .promo {
@@ -537,14 +550,24 @@ export default {
 
 .benefit {
   max-width: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit_content {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 900px) {
   .benefit {
     max-width: unset;
-    display: flex;
+  }
+
+  .benefit_content {
+    flex-direction: row;
     align-items: center;
-    gap: 20px
+    gap: 20px;
   }
 }
 
