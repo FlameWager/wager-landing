@@ -69,7 +69,7 @@ const showMobileMenu = ref(false)
 				</div> -->
 
 				<a href="/" :class="$style.logo" tabindex="-1">
-					<Icon name="logo_symbol" size="28" />
+					<img src="@/assets/landing/cd_logo.png" width="32" height="32" alt="Wager" :class="$style.logo_image" />
 				</a>
 			</div>
 

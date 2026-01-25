@@ -114,7 +114,7 @@
 ---
 
 ### Option 4: GitHub Pages
-**Best for:** Simple static hosting, already using GitHub
+**Best for:** Simple static osting, already using GitHub
 
 #### Pros:
 - ✅ Free with GitHub

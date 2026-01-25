@@ -8,7 +8,7 @@ import { links } from "@/config";
     <div :class="$style.base">
       <div :class="$style.content">
         <div :class="$style.logo">
-          <Icon name="logo_symbol" size="32" />
+          <img src="@/assets/landing/cd_logo.png" width="32" height="32" alt="Wager" :class="$style.logo_image" />
         </div>
       </div>
 
