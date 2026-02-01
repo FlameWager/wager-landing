@@ -7,9 +7,60 @@
 
 ---
 
-## 🎯 Recommended Options (Ranked by Ease & Features)
+## 🎯 Recommended: GitHub Pages (⭐ RECOMMENDED)
 
-### Option 1: Vercel (⭐ RECOMMENDED)
+**Best for:** Free hosting with automatic deployments via GitHub Actions
+
+### Pros:
+- ✅ Completely free
+- ✅ Automatic deployments on git push
+- ✅ Free SSL certificate
+- ✅ Custom domains supported
+- ✅ Already configured with GitHub Actions workflow
+- ✅ No third-party service needed
+
+### Cons:
+- ⚠️ Slightly slower than CDN options (but still fast)
+- ⚠️ Requires public repository (or GitHub Pro for private)
+
+### Steps:
+
+1. **Push code to GitHub** (if not already):
+   ```bash
+   git add .
+   git commit -m "Ready for deployment"
+   git push origin master
+   ```
+
+2. **Enable GitHub Pages:**
+   - Go to your repository on GitHub
+   - Click **Settings** → **Pages**
+   - Under **Source**, select:
+     - **Source:** `GitHub Actions`
+   - Save the settings
+
+3. **Trigger the workflow:**
+   - The workflow (`.github/workflows/deploy.yml`) will automatically run on push to `master` or `main` branch
+   - Or manually trigger it: Go to **Actions** tab → Select "Deploy to GitHub Pages" workflow → **Run workflow**
+
+4. **Wait for deployment:**
+   - Go to **Actions** tab to see the deployment progress
+   - The workflow will:
+     - Install dependencies
+     - Build the project (`npm run build`)
+     - Deploy to GitHub Pages
+   - Once complete, your site will be live!
+
+**Note:** The GitHub Actions workflow is already configured in `.github/workflows/deploy.yml` - no additional setup needed!
+
+**Result:** `https://yourusername.github.io/juster-landing`  
+Or with custom domain: `https://yourdomain.com`
+
+---
+
+## 🔧 Alternative Options
+
+### Option 1: Vercel
 **Best for:** Automatic deployments, zero configuration, excellent performance
 
 #### Pros:
@@ -113,63 +164,11 @@
 
 ---
 
-### Option 4: GitHub Pages
-**Best for:** Simple static osting, already using GitHub
-
-#### Pros:
-- ✅ Free with GitHub
-- ✅ Custom domains
-- ✅ Simple setup
-
-#### Cons:
-- ⚠️ Requires GitHub Actions for auto-deploy
-- ⚠️ Slightly slower than CDN options
-
-#### Steps:
-1. **Create GitHub Actions workflow:**
-   Create `.github/workflows/deploy.yml`:
-   ```yaml
-   name: Deploy to GitHub Pages
-   
-   on:
-     push:
-       branches: [ master ]
-   
-   jobs:
-     build-and-deploy:
-       runs-on: ubuntu-latest
-       steps:
-         - uses: actions/checkout@v3
-         
-         - name: Setup Node.js
-           uses: actions/setup-node@v3
-           with:
-             node-version: '18'
-             cache: 'npm'
-         
-         - name: Install dependencies
-           run: npm ci
-         
-         - name: Build
-           run: npm run build
-         
-         - name: Deploy to GitHub Pages
-           uses: peaceiris/actions-gh-pages@v3
-           with:
-             github_token: ${{ secrets.GITHUB_TOKEN }}
-             publish_dir: ./dist
-   ```
-
-2. **Enable GitHub Pages:**
-   - Go to repository Settings → Pages
-   - Source: `gh-pages` branch
-   - Save
-
-**Result:** `https://yourusername.github.io/juster-landing`
+### Option 3: Cloudflare Pages
 
 ---
 
-### Option 5: Firebase Hosting
+### Option 4: Firebase Hosting
 **Best for:** Google ecosystem integration
 
 #### Pros:
@@ -279,19 +278,19 @@ npm run preview  # Test the build locally
 
 | Platform | Setup Time | Auto-Deploy | Custom Domain | CDN | Best For |
 |----------|-----------|------------|---------------|-----|----------|
+| **GitHub Pages** ⭐ | 3 min | ✅ | ✅ | ✅ | Already configured! |
 | **Vercel** | 2 min | ✅ | ✅ | ✅ | Easiest, best DX |
 | **Netlify** | 3 min | ✅ | ✅ | ✅ | Forms, functions |
 | **Cloudflare** | 5 min | ✅ | ✅ | ✅ | Fastest CDN |
-| **GitHub Pages** | 10 min | ✅ | ✅ | ⚠️ | GitHub users |
 | **Firebase** | 8 min | ⚠️ | ✅ | ✅ | Google ecosystem |
 
 ---
 
 ## 🎯 Recommendation
 
-**Use Vercel** for the fastest, easiest deployment with zero configuration.
+**Use GitHub Pages** - It's already configured with the workflow file (`.github/workflows/deploy.yml`). Just enable Pages in repository settings and push your code!
 
-**Alternative:** Use Netlify if you prefer their interface or need form handling.
+**Alternative:** Use Vercel or Netlify if you prefer their interfaces or need additional features.
 
 ---
 
@@ -301,6 +300,7 @@ npm run preview  # Test the build locally
 - All platforms support custom domains
 - Build output is `dist/` folder
 - The project is already configured with `base: './'` in `vite.config.js` which is good for deployment
+- **GitHub Actions workflow is already set up** in `.github/workflows/deploy.yml`
 - No environment variables needed for basic deployment
 
 ---

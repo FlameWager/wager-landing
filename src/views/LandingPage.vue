@@ -49,7 +49,9 @@ export default {
       </div>
 
       <div :class="$style.buttons">
-        <Text size="18" weight="600" :class="$style.coming_soon_text">COMING SOON</Text>
+        <Button type="primary" size="medium" :link="links.demo">
+          <Icon name="spark" size="16" /> Launch App
+        </Button>
         <Button type="secondary" size="medium" :link="links.twitter">
           <Icon name="x" size="16" />X channel
         </Button>
@@ -458,12 +460,7 @@ export default {
   gap: 16px;
 }
 
-.coming_soon_text {
-  display: flex;
-  align-items: center;
-  color: var(--blue);
-  font-size: 18px;
-}
+
 
 .promo {
   margin-top: 50px;
